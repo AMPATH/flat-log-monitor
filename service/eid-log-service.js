@@ -21,7 +21,7 @@ FROM
     join amrs.concept_name cn on (cn.concept_id = o.concept_id AND cn.voided = 0)
 WHERE
     o.concept_id = ${resultConcept}
-    AND o.creator = 167996
+    AND o.creator = 169223
 ORDER BY o.date_created DESC
 LIMIT 1;`;
 
