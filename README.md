@@ -45,8 +45,8 @@ the channel webhook which you will set in the config.json file
 
 
 ## Building and deployment
-```docker build -f Dockerfile -t ampathke/flat-log-monitor/flat-log-monitor:tagname:<version> .```
+```docker build -f Dockerfile -t ampathke/flat-log-monitor:<tag> .```
 
-```docker run -d -it --name flat-log-monitor --restart unless-stopped  --mount type=bind,source="/opt/flat-log-monitor",target="/usr/src/app/config"  ampathke/flat-log-monitor:latest```
+```docker run -d -it --name flat-log-monitor --restart unless-stopped  --mount type=bind,source="<source>",target="/usr/src/app/config"  ampathke/flat-log-monitor:latest```
 
 
