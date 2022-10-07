@@ -1,6 +1,7 @@
 'use strict'
 const connection = require('../connection/conection');
 
+const config = require('../config/config');
 const def = {
   checkLastResultEntry
 }
@@ -21,7 +22,7 @@ FROM
     join amrs.concept_name cn on (cn.concept_id = o.concept_id AND cn.voided = 0)
 WHERE
     o.concept_id = ${resultConcept}
-    AND o.creator = 169223
+    AND o.creator = `${config.creator.creatorId}`
 ORDER BY o.date_created DESC
 LIMIT 1;`;
 
