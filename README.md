@@ -35,6 +35,9 @@ the channel webhook which you will set in the config.json file
   "queueTables": {
     "ampath": "",
     "alupe": ""
+  },
+  "creator": {
+    "creatorId": ""
   }
 }
 ```
